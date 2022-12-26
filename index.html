@@ -7,6 +7,7 @@
     <title>git_portfolio</title>
 
     <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/common.css">
     <script src="./js/js.js"></script>
     
 
@@ -14,9 +15,16 @@
         .wrap.bg_01 {background:#b33032;height:100vh;}
         .me_img {width:500px;height:500px;border-radius:50%;overflow:hidden;vertical-align: middle;margin:0 auto;border:3px solid #fff;background:#fff;transform:translateY(40%)}
         .me_img img {text-align:center;width:550px;height:auto;transform:translate(-10px,0)}
-        .bg_btn_box {position:fixed;right:5vw;top:5vh;border:none;}
+        .bg_btn_box {position:fixed;right:1vw;top:2vh;border:none;}
+        .bg_btn_box::after {content:'스위치를 \a 눌러보세요!';white-space: pre;text-align:center;display:inline-block; font-family: 'establishRoomNo703OTF';color:#fff;position:absolute;left:-4vw;top:1.8vh;font-size:1rem;animation:opacity 3s infinite;transform:rotate(-10deg)}
+        .bg_btn_box::before{content:'꾹';display:inline-block;position:absolute;top:3vh;left:-5.5vw;color:#ff0;animation:opacity 3s infinite;font-family: 'establishRoomNo703OTF';font-size:1.8rem;transform:rotate(10deg)}
         .bg_btn {border:none;height:55px}
         .bg_btn_box img {width:40px;background:#b33032}
+
+        @keyframes opacity{
+            0% {opacity:0}
+            100% {opacity:1}
+        }
     </style>
 
 
