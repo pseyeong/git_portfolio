@@ -7,17 +7,27 @@
     <title>git_portfolio</title>
 
     <link rel="stylesheet" href="./css/style.css">
+    <script src="./js/js.js"></script>
+    
 
     <style>
         .wrap.bg_01 {background:#b33032;height:100vh;}
         .me_img {width:500px;height:500px;border-radius:50%;overflow:hidden;vertical-align: middle;margin:0 auto;border:3px solid #fff;background:#fff;transform:translateY(40%)}
-        .me_img img {text-align:center;width:550px;height:auto;transform:translate(-3%,0)}
+        .me_img img {text-align:center;width:550px;height:auto;transform:translate(-10px,0)}
+        .bg_btn_box {position:fixed;right:5vw;top:5vh;border:none;}
+        .bg_btn {border:none;height:55px}
+        .bg_btn_box img {width:40px;background:#b33032}
     </style>
 
 
 </head>
 <body>
-    <div class="wrap bg_01">
+    <div class="wrap bg_01" id="bg_col">
+        <div class="bg_btn_box">
+            <button onclick="change_col();" class="bg_btn">
+                <img src="./images/switch_on.png" id="switch_img"/>
+            </button>
+        </div>
         <div class="">
             <header>
                 <div class="head">
@@ -26,7 +36,7 @@
             </header>
             <section>
                 <div class="me_img_box">
-                    <div class="me_img"><img src="./images/me.gif" alt="me!"/></div>
+                    <div class="me_img"><img src="./images/me.gif" alt="me!" id="me_face"/></div>
                 </div>
             </section>
             <footer>
