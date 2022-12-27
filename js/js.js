@@ -21,4 +21,21 @@ function change_col(){
     switch_bg.style.backgroundColor = bg_color[i];
 }
 
+(function(){
+    const main_txt = "Hi. I'm SE YEONG";
+    const typing_txt = document.getElementById("main_typing");
+
+    let i = 0;
+
+    function typing(){
+        if(i < main_txt.length){
+            let txt = main_txt.charAt(i);
+            typing_txt.innerHTML += txt;
+            i++;
+        }
+    }
+    setInterval(typing, 200);
+}());
+
+
 

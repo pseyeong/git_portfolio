@@ -8,23 +8,27 @@
 
     <link rel="stylesheet" href="./css/style.css">
     <link rel="stylesheet" href="./css/common.css">
-    <script src="./js/js.js"></script>
+    
     
 
     <style>
         .wrap.bg_01 {background:#b33032;height:100vh;}
-        .me_img {width:500px;height:500px;border-radius:50%;overflow:hidden;vertical-align: middle;margin:0 auto;border:3px solid #fff;background:#fff;transform:translateY(40%)}
+        .me_img_box {transform:translateY(40%)}
+        .me_img {width:500px;height:500px;border-radius:50%;overflow:hidden;vertical-align: middle;margin:0 auto;border:3px solid #fff;background:#fff;}
         .me_img img {text-align:center;width:550px;height:auto;transform:translate(-10px,0)}
         .bg_btn_box {position:fixed;right:1vw;top:2vh;border:none;}
-        .bg_btn_box::after {content:'스위치를 \a 눌러보세요!';white-space: pre;text-align:center;display:inline-block; font-family: 'establishRoomNo703OTF';color:#fff;position:absolute;left:-4vw;top:1.8vh;font-size:1rem;animation:opacity 3s infinite;transform:rotate(-10deg)}
-        .bg_btn_box::before{content:'꾹';display:inline-block;position:absolute;top:3vh;left:-5.5vw;color:#ff0;animation:opacity 3s infinite;font-family: 'establishRoomNo703OTF';font-size:1.8rem;transform:rotate(10deg)}
+        .bg_btn_box:hover::after {animation-play-state: paused;}
+        .bg_btn_box::after {content:'스위치를 \a 눌러보세요!';white-space: pre;text-align:center;display:inline-block; font-family: 'establishRoomNo703OTF';color:#fff;position:absolute;right:2.5vw;bottom:0vh;font-size:1rem;animation:opacity ease-in-out 2s infinite;animation-delay:1s;transform:rotate(-10deg);opacity:0}
+        /*.bg_btn_box::before{content:'꾹';display:inline-block;position:absolute;bottom:0vh;right:6vw;color:#ff0;animation:opacity ease-in-out 2s infinite;opacity:0;font-family: 'establishRoomNo703OTF';font-size:1.8rem;transform:rotate(10deg);opacity:0}*/
         .bg_btn {border:none;height:55px}
         .bg_btn_box img {width:40px;background:#b33032}
 
         @keyframes opacity{
-            0% {opacity:0}
-            100% {opacity:1}
+            0% {opacity:0;font-size:0;}
+            100% {opacity:1;font-size:auto}
         }
+
+        #main_typing {font-size:2rem;color:#111;background:#fff;border-radius:30px;padding:20px 30px;position:absolute;top:0;left:60%}
     </style>
 
 
@@ -44,7 +48,11 @@
             </header>
             <section>
                 <div class="me_img_box">
-                    <div class="me_img"><img src="./images/me.gif" alt="me!" id="me_face"/></div>
+                    <div class="me_img">
+                        <img src="./images/me.gif" alt="me!" id="me_face"/>
+                        
+                    </div>
+                    <p id="main_typing"></p>
                 </div>
             </section>
             <footer>
@@ -53,4 +61,5 @@
         </div>
     </div>
 </body>
+<script src="./js/js.js"></script>
 </html>
