@@ -33,6 +33,7 @@ function change_col(){
             typing_txt.innerHTML += txt;
             i++;
         }
+      
     }
     setInterval(typing, 200);
 }());
